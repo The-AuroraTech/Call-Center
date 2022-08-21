@@ -1,0 +1,23 @@
+drop table callers;
+drop table calls;
+drop table employees;
+
+drop table calls_flexData;
+drop table callers_flexData;
+drop table employees_flexData;
+
+create table callers (id integer autoincrement, firstName text, lastName text, email text, phone text, phone_extension text, address1 text, address2 text, city text, state text, postal_code integer, lastCallDateTime text, primary key (id));
+
+create table calls (id integer autoincrement, startDateTime text default CURRENT_TIMESTAMP, secondsDuration integer, caller_id integer, employee_id integer, subject integer, status integer, notes text, primary key (id));
+
+create table employees (id integer autoincrement, firstName text, lastName text, email text, password text, roles text, primary key (id));
+
+create table callers_flexData (id integer, field text, value text);
+
+create table calls_flexData (id integer, field text, value text);
+
+create table employees_flexData (id integer, field text, value text);
+
+create table postal_codes (postal_code_id integer unique, city text, state text);
+
+insert into employees (email,password,firstName,lastName,roles) values('admin@localhost.com','ae2b1fca515949e5d54fb22b8ed95575','First','Administrator','Administrator');
