@@ -1,0 +1,12 @@
+{include:header.html}
+
+{switch:action}
+{case:'newCall'}
+<h2>Successfully Added New Call for {caller['firstName']} {caller['lastName']}</h2>
+
+{case:'editCaller'}
+<h2>Updated Record for : {caller['firstName']} {caller['lastName']}</h2>
+
+{endswitch:}
+
+{include:footer.html}

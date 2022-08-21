@@ -1,0 +1,24 @@
+{if:calls}
+<table border="1" cellspacing="0" width="100%">
+	<tr>
+		<th>#</th>
+		<th>Date</th>
+{if:hideDuration}{else:}		<th>Duration</th>{end:}
+{if:hideCaller}{else:}		<th>Caller</th>{end:}
+		<th>Subject</th>
+		<th>Notes</th>
+		<th>Status</th>
+	</tr>
+{foreach:calls,call}
+	<tr>
+		<td>{call['i']}</td>
+		<td>{call['startDateTime']}</td>
+{if:hideDuration}{else:}		<td>{call['duration']}</td>{end:}
+{if:hideCaller}{else:}		<td>{call['caller']}</td>{end:}
+		<td>{call['subject']}</td>
+		<td>{call['notes']}&nbsp;</td>
+		<td>{call['status']}&nbsp;</td>
+	</tr>
+{end:}
+</table>
+{end:}

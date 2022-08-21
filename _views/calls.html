@@ -1,0 +1,17 @@
+{include:header.html}
+
+{if:search}
+<h1>Search</h1>
+<p>Selecting nothing searches all.</p>
+	{search}
+
+{include:calls_showEmployee.html}
+
+
+{else:}
+<h1>Recent Calls</h1>
+
+{include:calls_hideEmployee.html}
+{end:}
+
+{include:footer.html}

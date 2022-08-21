@@ -1,0 +1,15 @@
+{include:header.html}
+<!--
+<form action="" method="post"><input type="hidden" name="reset" value="{action}" /><input type="submit" value="Start Over" /></form>
+-->
+
+<b>Caller:</b> {caller['firstName']} {caller['lastName']}
+
+{callForm}
+
+{if:calls}
+<h2>Previous Calls</h2>
+{include:calls_showEmployee.html}
+{end:}
+
+{include:footer.html}

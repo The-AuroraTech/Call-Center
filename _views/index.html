@@ -1,0 +1,21 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script src="/javascript/misc.js"></script>
+<script src="/javascript/jquery.js"></script>
+<title>{if:pageTitle}{pageTitle} - {end:}{title}</title>
+</head>
+
+<body bgcolor="#324C69" text="white" link="#c0c0c0" alink="#c0c0c0" vlink="#c0c0c0" topmargin=0>
+<table cellspacing=0 cellpadding=0 width="100%">
+	<tr>
+		<td align="center">
+{foreach:childOutput,val}
+{val}
+{end:}
+
+		</td>
+	</tr>
+</table>
+</body>
+</html>

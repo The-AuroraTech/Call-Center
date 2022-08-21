@@ -1,0 +1,35 @@
+{if:loggedIn}
+{include:header.html}
+
+<h1>Welcome</h1>
+
+<table width="700">
+	<tr>
+		<th>Logged in as</th>
+		<td>{name}</td>
+	</tr><tr>
+		<th>Login time</th>
+		<td>{loginTime}</td>
+	</tr><tr>
+		<th>Login Duration</th>
+		<td>{sinceLogin}</td>
+	</tr><tr>
+		<th>Calls Today</th>
+		<td>{callsToday}</td>
+	</tr><tr>
+		<th>Average Call Length</th>
+		<td>{averageCallLength}</td>
+	</tr>
+</table>
+
+{include:footer.html}
+
+{else:}
+
+<form action="{url}" method="post">
+<input type="text" name="email" value="" />
+<input type="password" name="password" value="" />
+<input type="submit" />
+</form>
+
+{end:}

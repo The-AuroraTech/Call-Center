@@ -1,0 +1,32 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/main.css" />
+	<title>{if:pageTitle}{pageTitle} - {end:}{title}</title>
+	<script src="/javascript/jquery.js"></script>
+	<script src="/javascript/misc.js"></script>
+	<script src="/javascript/singleClickSelect.js"></script>
+</head>
+<body>
+<table width="100%">
+	<tr>
+		<td align="center">
+
+<table cellpadding="5" width="100%">
+	<tr>
+		<td><a href="/">Home</a></td>
+		<td><a href="/?task=newCall">New Call</a></td>
+		<td><a href="/?task=recentCalls">Today's Calls</a></td>
+		<td><a href="/?task=editCaller">Add/Edit Caller</a></td>
+{if:isAdministrator}
+		<td><a href="/?task=searchCalls">Search Calls</a></td>
+		<td><a href="/?task=editEmployee">Add/Edit Employee</a></td>
+{end:}
+		<td>{if:loggedIn}<a href="?logout">Logout</a>{else:}{end:}</td>
+	</tr>
+</table>
+<!--
+<form action="/" method="post"><input type="hidden" name="reset" value="{action}" /><input type="submit" value="Back to Menu" /></form>
+-->
+{if:task}
+<h1>{task}</h1>
+{end:}

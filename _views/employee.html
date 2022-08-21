@@ -1,0 +1,19 @@
+{include:header.html}
+
+<div style="float:right">
+{if:edit}
+<h1>Add Employee</h1>
+{edit}
+{end:}
+</div>
+
+<div style="float:left">
+{if:employees}
+<h1>Select Employee</h1>
+{foreach:employees,item}
+<form action="" method="post"><input type="hidden" name="target" value="select" /><input type="hidden" name="id" value="{item['id']}" /><input type="submit" value="{item['firstName']} {item['lastName']}" /></form>
+{end:}
+{end:}
+</div>
+
+{include:footer.html}

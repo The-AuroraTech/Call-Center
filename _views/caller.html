@@ -1,0 +1,49 @@
+{include:header.html}
+
+<div style="float:left; width:50%">
+{if:edit}
+	<h2>{if:edit}Edit{else:}Add{end:} Caller</h2>
+	{form}
+{else:}
+	<h2>Search Callers</h2>
+	{searchForm}
+
+	{if:callerSearchResults}
+	{else:}
+	<h2>Add Caller</h2>
+	{form}
+	{end:}
+{end:}
+</div>
+
+{if:edit}
+{else:}
+
+<div style="float:right; width:50%">
+{if:callerSearchResults}
+	<h2>Search Results</h2>
+	{foreach:callerSearchResults,item}
+	<div style="float:left;width:200px;border:1px solid black;margin-right:15px;" class="form">
+		<strong>{item['firstName']} {item['lastName']}</strong>
+		<br />{item['email']}
+		<br /><br />
+		<form action="{url}" method="post"><input type="hidden" name="target" value="select" /><input type="hidden" name="id" value="{item['id']}" /><input type="submit" value="Select" /></form>
+	</div>
+	{end:}
+
+
+{else:}
+	<h2>Ten Recent Callers</h2>
+	{foreach:callers,item}
+	<div style="float:left;width:200px;border:1px solid black;margin-right:15px;" class="form">
+		<strong>{item['firstName']} {item['lastName']}</strong>
+		<br />{item['email']}
+		<br /><br />
+		<form action="{url}" method="post"><input type="hidden" name="target" value="select" /><input type="hidden" name="id" value="{item['id']}" /><input type="submit" value="Select" /></form>
+	</div>
+	{end:}
+{end:}
+</div>
+{end:}
+
+{include:footer.html}
