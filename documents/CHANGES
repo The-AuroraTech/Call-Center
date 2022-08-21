@@ -1,0 +1,16 @@
+0.3-beta
+
+- Now utilizing a templating system (Vemplator) and Database abstraction (dbFacile)
+- New User Interface
+ 
+- fix date fields on search
+- show action on top of pages: Add/Edit Caller
+- Zip to Caller
+- call searching
+- Save, End Call, Back buttons on New Call
+- search on all caller screens
+- menu
+	- if Regular, give self stats for today
+		- show saved calls
+		- average call length
+		- # today - increment when End Call?

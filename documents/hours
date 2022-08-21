@@ -1,0 +1,17 @@
+20070728
+Make sure New Call form is easily extendable
+Update dbSimple to new dbFacile
+Fix issues with Call Search and new dbFacile
+13:45-14:00
+Fix date range on Call Search
+14:00-14:20
+Fix field types for New Call after updating Autoform
+14:20-14:25
+Add State list to form
+14:25-14:35
+Move _controllers, _models, _views, _includes out of web-accessible folder
+15:00-15:10
+Update to new wikivert
+15:10-15:25
+Show "Saved" message after successful adds/edits
+15:25-15:30

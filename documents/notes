@@ -1,0 +1,12 @@
+- load won't run prepareRecord() on input data
+	- use read with id instead
+- flexFields are not searchable
+	- it's easy enough to add new fields to the code and templates
+
+- column ordering on search results
+	- pass columns to templator
+		- db field name is key
+		- value is [label, currently sorting?]
+	- pass search results too
+	- loop over columns printing url with &sort=name
+	- search results must have fields in order associated with columns

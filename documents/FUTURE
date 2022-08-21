@@ -1,0 +1,23 @@
+- editing Employees and probably callers is buggy. Adding new caller kept editing previous one.
+- printable Search Results
+- color coding representing call age on listing pages
+- table column sorting
+	- table generator
+- better UI
+- after add new call, go to Recent Calls?
+
+- menu
+	- if Admin, give other employees stats for today
+- statistics
+	- month
+	- weekly
+	- daily
+	- averages
+- more caller info at top of NewCall
+- condense caller methds into execute()
+- on Search, multiselect with employees using single-click selection JS
+- Pass Along button on bottom of NewCall?
+
+
+NO
+- add back capability to chainLink

@@ -1,0 +1,4 @@
+Modify your database with the new fields you need
+Edit _models/callModel.php and add new Autoform field definitions to the array in getFormFields()
+Edit _models/callSearchModel.php and add new Autoform field definitions to the array in getFormFields()
+Edit searchCalls() in _controllers/callsController.php with logic for searching on the new fields
